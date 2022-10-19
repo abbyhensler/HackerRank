@@ -1,5 +1,5 @@
 -- Problem: https://www.hackerrank.com/challenges/weather-observation-station-6/problem?isFullScreen=true
--- Score: 10
+-- Score: 10/10
 
 
 SELECT CITY 
