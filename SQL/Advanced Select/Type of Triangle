@@ -1,0 +1,12 @@
+-- Problem: https://www.hackerrank.com/domains/sql?filters%5Bsubdomains%5D%5B%5D=advanced-select&filters%5Bstatus%5D%5B%5D=solved
+-- Score: 20/20
+
+
+SELECT 
+CASE
+WHEN A + B <= C OR A + C <= B OR B + C <= A THEN 'Not A Triangle'
+WHEN A = B AND B = C THEN 'Equilateral'
+WHEN A = B OR A = C OR B = C THEN 'Isosceles'
+ELSE 'Scalene'
+END
+FROM TRIANGLES;
