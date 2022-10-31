@@ -1,0 +1,9 @@
+-- Problem: https://www.hackerrank.com/challenges/african-cities/problem?isFullScreen=true
+-- Score: 10/10
+
+
+SELECT City.NAME
+FROM City
+JOIN Country
+ON City.COUNTRYCODE = Country.CODE
+WHERE Country.Continent = 'Africa'
