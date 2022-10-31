@@ -1,0 +1,9 @@
+-- Problem: https://www.hackerrank.com/challenges/asian-population/problem?isFullScreen=true
+-- Score: 10/10
+
+
+SELECT SUM(City.POPULATION) 
+FROM City
+JOIN Country
+ON City.COUNTRYCODE = Country.CODE
+WHERE Country.CONTINENT = 'Asia'
