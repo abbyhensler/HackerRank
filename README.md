@@ -1,2 +1,1 @@
-# HackerRank
-This is a repository of my solutions to HackerRank problems. 
+This is a repository of my solutions to SQL practice problems (HackerRank and LeetCode). 
