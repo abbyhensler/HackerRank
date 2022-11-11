@@ -1,0 +1,13 @@
+-- Problem: https://www.hackerrank.com/challenges/sql-projects/problem?isFullScreen=true
+-- Score: 40/40
+
+
+SELECT start_date, MIN(end_date)
+FROM
+(SELECT p2.start_date FROM projects p1 RIGHT JOIN projects p2 
+ON p1.end_date = p2.start_date WHERE p1.start_date IS NULL) start_date,
+(SELECT p1.end_date FROM projects p1 LEFT JOIN projects p2 
+ON p1.end_date = p2.start_date WHERE p2.end_date IS NULL) end_date
+WHERE start_date < end_date
+GROUP BY 1
+ORDER BY DATEDIFF(MIN(end_date), start_date), 1
