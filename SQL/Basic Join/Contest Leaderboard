@@ -1,0 +1,10 @@
+-- Problem: https://www.hackerrank.com/challenges/contest-leaderboard/problem?isFullScreen=true
+-- Score: 
+
+
+SELECT h.hacker_id, h.name, SUM(sub.score) AS total_score
+FROM (SELECT hacker_id, challenge_id, MAX(score) AS score FROM submissions GROUP BY 1, 2) sub
+JOIN hackers h ON h.hacker_id = sub.hacker_id
+GROUP BY 1, 2
+HAVING total_score > 0
+ORDER BY total_score DESC, h.hacker_id ASC
