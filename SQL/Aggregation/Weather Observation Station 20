@@ -1,0 +1,8 @@
+-- Problem: https://www.hackerrank.com/challenges/weather-observation-station-20/problem?isFullScreen=true
+-- Score: 40/40
+
+
+SELECT ROUND(t1.lat_n, 4) FROM 
+(SELECT lat_n, PERCENT_RANK() OVER (ORDER BY LAT_N) AS pct_rank
+FROM Station) t1
+WHERE t1.pct_rank = 0.5
