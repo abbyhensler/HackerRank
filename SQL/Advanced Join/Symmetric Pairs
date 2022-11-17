@@ -1,5 +1,5 @@
 -- Problem: https://www.hackerrank.com/challenges/symmetric-pairs/problem?isFullScreen=true
--- Score: 
+-- Score: 40/40
 
 
 SELECT f1.X, f1.Y
